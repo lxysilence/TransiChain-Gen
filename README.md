@@ -16,6 +16,6 @@ The evaluation code is available in ```src/TripChain/evaluation```
 
 there are two open-source benchmarks available, which are:
 
--Adatrace: The code repository is available at [Adatrace GitHub repositoryr](https://github.com/FIBLAB/MoveSim).
+-Adatrace: The code repository is available at [Adatrace GitHub repository](https://github.com/FIBLAB/MoveSim).
 
--MoveSim: The code repository is available at [MoveSim GitHub repositoryr](https://github.com/git-disl/AdaTrace).
+-MoveSim: The code repository is available at [MoveSim GitHub repository](https://github.com/git-disl/AdaTrace).
