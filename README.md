@@ -5,9 +5,16 @@ TransiChain-Gen is a novel DP-based trajectory synthesis framework featuring a d
 # Getting Started
 The raw data format is as follows:
 
-The raw data preprocessing code is available in ```src/TripChain/pre```, ```adaptive.py``` implements adaptive time discretization and converts data formats into preprocessed formats via ```DataFrame.scala```.
+Fields are comma-separated with the following notation: O for Origin, D for Destination, H for Home, and W for Workplace.
+```id,Ostation,Odate,Olon,Olat,Ddate,Dstation,Dlon,Dlat,trans,Hlat,Hlon,Wlat,Wlon,fare,translist,detail,bus,sub;subtans```
+
+The most critical field is 'detail', which connects multiple OD sequences to form complete trip chains. Each entry contains 
+```id;Odate;Ostation;Olon;Olat;Ddate;Dstation;Dlon;Dlat;...```
+
+The raw data preprocessing code is available in ```src/TripChain/pre```, ```adaptive.py``` implements adaptive time discretization and converts data formats into preprocessed formats via ```DataFrame.scala```. This process involves complete trip chain sequence extraction, adaptive temporal generalization, and spatial transfer point simplification.
 
 preprocessed data format is as follows：
+```timestamp1 station1,timestamp2 station2,...```
 
 The data generation code is available in ``` src/TripChain/generator/Main_TransiChain.java ```.
 
